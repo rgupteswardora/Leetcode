@@ -24,7 +24,6 @@ class Solution(object):
                 k=len(lis)
             else:
                 k=(k%len(lis))
-        print(k)
         for i in range(k):
             newlis.append(lis[-1])
             newlis.extend(lis[0:len(lis)-1])
