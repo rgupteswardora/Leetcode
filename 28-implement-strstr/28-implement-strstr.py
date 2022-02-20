@@ -5,8 +5,6 @@ class Solution(object):
         :type needle: str
         :rtype: int
         """
-        rt=-1
-        count=0
         if(haystack==needle):
             return 0
         elif(needle==""):
