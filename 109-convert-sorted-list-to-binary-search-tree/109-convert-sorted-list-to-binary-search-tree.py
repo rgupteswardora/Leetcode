@@ -15,6 +15,8 @@ class Solution(object):
         :type head: Optional[ListNode]
         :rtype: Optional[TreeNode]
         """
+        if not head:
+            return None
         data=[]
         node1=head
         while node1:
