@@ -5,10 +5,20 @@ class Solution(object):
         :type target: int
         :rtype: bool
         """
-        lis=[]
         for i in matrix:
-            lis=lis+i
-        if target in lis:
-            return True
-        else:
-            return False
+            if(i[0]<=target and i[-1]>=target):
+                left=0
+                right=len(i)-1
+                while(left<=right):
+                    mid=(left+right)//2
+                    if left==right and i[mid]!=target:
+                        return False
+                    if i[mid]==target:
+                        return True
+                    elif i[mid]>target:
+                        right=mid
+                    elif i[mid]<target:
+                        left=mid+1
+            else:
+                None
+        return False
