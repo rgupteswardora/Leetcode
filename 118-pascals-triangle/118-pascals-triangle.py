@@ -4,12 +4,12 @@ class Solution(object):
         :type numRows: int
         :rtype: List[List[int]]
         """
-        output=[[1]]
+        lis=[[1]]
         for i in range(numRows-1):
-            temp=[0]+output[-1]+[0]
+            tem=[0]+lis[-1]+[0]
             rw=[]
-            for j in range(len(output[-1])+1):
-                rw.append(temp[j]+temp[j+1])
-            output.append(rw)
+            for j in range(len(lis[-1])+1):
+                rw.append(tem[j]+tem[j+1])
+            lis.append(rw)
             rw=[]
-        return output
+        return lis
