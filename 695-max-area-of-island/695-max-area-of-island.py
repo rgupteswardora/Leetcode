@@ -1,9 +1,5 @@
-class Solution(object):
-    def maxAreaOfIsland(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
+class Solution:
+    def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
         Visited=set()
         row,coloum=len(grid),len(grid[0])
         max=0
