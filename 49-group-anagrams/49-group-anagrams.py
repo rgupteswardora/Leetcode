@@ -4,12 +4,14 @@ class Solution(object):
         :type strs: List[str]
         :rtype: List[List[str]]
         """
-        ans = collections.defaultdict(list)
+        dis=collections.defaultdict(list)
         
-        for s in strs:
-            count = [0] * 26
-            for c in s:
-                count[ord(c) - ord('a')] += 1
-            ans[tuple(count)].append(s)
-        return ans.values()
+        for st in strs:
+            coutn=[0]*26
+            
+            for c in st:
+                coutn[ord(c)-ord("a")]+=1
+            
+            dis[tuple(coutn)].append(st)
+        return dis.values()
         
